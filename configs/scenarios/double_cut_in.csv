@@ -1,0 +1,5 @@
+# role,lane_id,x,speed,behavior,target_lane,trigger_x,desired_speed
+ego,1,0.0,20.0,cruise,,,
+actor,0,18.0,17.0,cut_in_right,1,8.0,17.0
+actor,2,32.0,16.0,cut_in_left,1,10.0,16.0
+actor,1,65.0,12.0,cruise,,,12.0

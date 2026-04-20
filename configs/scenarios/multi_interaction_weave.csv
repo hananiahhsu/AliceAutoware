@@ -1,0 +1,7 @@
+# role,lane,x,speed,behavior,target_lane,trigger_x,desired_speed
+ego,1,0,20.0,,,,
+car,1,30,10.0,cruise,,,10.0
+car,0,18,18.0,cut_in_right,1,8,16.0
+car,2,26,17.5,cut_in_left,1,16,16.5
+car,0,70,21.0,cruise,,,21.0
+car,2,78,20.0,cruise,,,20.0

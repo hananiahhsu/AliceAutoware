@@ -1,0 +1,39 @@
+@startuml
+skinparam monochrome true
+package "prediction" {
+  [multi_agent_behavior_predictor]
+  [joint_interaction_predictor]
+  [scene_risk_assessor]
+  [risk_object_ranker]
+  [trajectory_hypothesis_generator]
+}
+package "planning" {
+  [behavior_tree]
+  [task_tree]
+  [lane_sequence_planner]
+  [corridor_cost_evaluator]
+  [gap_acceptance_evaluator]
+  [trajectory_planner]
+}
+package "safety" {
+  [rss_longitudinal_checker]
+  [rss_lateral_checker]
+  [rss_lane_change_checker]
+  [safety_supervisor]
+  [safety_guardian]
+}
+package "runtime" {
+  [autonomy_stack]
+  [fallback_manager]
+  [diagnostics_monitor]
+}
+[multi_agent_behavior_predictor] --> [joint_interaction_predictor]
+[scene_risk_assessor] --> [risk_object_ranker]
+[behavior_tree] --> [task_tree]
+[lane_sequence_planner] --> [corridor_cost_evaluator]
+[autonomy_stack] --> [lane_sequence_planner]
+[autonomy_stack] --> [fallback_manager]
+[autonomy_stack] --> [safety_supervisor]
+[autonomy_stack] --> [safety_guardian]
+[autonomy_stack] --> [trajectory_planner]
+@enduml

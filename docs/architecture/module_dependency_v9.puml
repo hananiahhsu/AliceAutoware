@@ -1,0 +1,56 @@
+@startuml
+skinparam backgroundColor white
+skinparam packageStyle rectangle
+package "Perception" {
+  [sensor_model]
+  [fusion_engine]
+  [track_manager]
+  [occupancy_grid]
+  [lane_occupancy_analyzer]
+}
+package "Prediction" {
+  [intention]
+  [constant_velocity]
+  [trajectory_hypothesis_generator]
+  [joint_interaction_predictor]
+  [scene_risk_assessor]
+  [risk_object_ranker]
+}
+package "Planning" {
+  [behavior_tree]
+  [task_tree]
+  [lane_sequence_planner]
+  [behavior_planner]
+  [gap_acceptance_evaluator]
+  [trajectory_planner]
+}
+package "Safety" {
+  [rss_lane_change_checker]
+  [safety_supervisor]
+  [safety_guardian]
+}
+package "Control" {
+  [gain_scheduler]
+  [controller]
+}
+[sensor_model] --> [fusion_engine]
+[fusion_engine] --> [track_manager]
+[track_manager] --> [lane_occupancy_analyzer]
+[track_manager] --> [intention]
+[intention] --> [constant_velocity]
+[constant_velocity] --> [trajectory_hypothesis_generator]
+[trajectory_hypothesis_generator] --> [joint_interaction_predictor]
+[joint_interaction_predictor] --> [scene_risk_assessor]
+[scene_risk_assessor] --> [risk_object_ranker]
+[risk_object_ranker] --> [behavior_tree]
+[risk_object_ranker] --> [task_tree]
+[task_tree] --> [lane_sequence_planner]
+[lane_sequence_planner] --> [behavior_planner]
+[behavior_planner] --> [gap_acceptance_evaluator]
+[gap_acceptance_evaluator] --> [rss_lane_change_checker]
+[rss_lane_change_checker] --> [safety_supervisor]
+[safety_supervisor] --> [trajectory_planner]
+[trajectory_planner] --> [safety_guardian]
+[safety_guardian] --> [gain_scheduler]
+[gain_scheduler] --> [controller]
+@enduml

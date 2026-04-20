@@ -1,0 +1,6 @@
+# role,lane_id,x,speed,behavior,target_lane,trigger_x,desired_speed
+ego,1,0.0,21.0,cruise,,,
+traffic,1,38.0,18.0,brake,,18.0,10.0
+traffic,0,-18.0,20.0,cruise,,,20.0
+traffic,0,96.0,21.0,cruise,,,21.0
+traffic,2,88.0,19.0,cruise,,,19.0

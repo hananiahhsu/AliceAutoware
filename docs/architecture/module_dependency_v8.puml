@@ -1,0 +1,73 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam monochrome false
+
+package "perception" {
+  [perception.sensor_model]
+  [perception.fusion_engine]
+  [perception.track_manager]
+  [perception.occupancy_grid]
+  [perception.lane_occupancy_analyzer]
+}
+
+package "prediction" {
+  [prediction.intention]
+  [prediction.constant_velocity]
+  [prediction.trajectory_hypothesis_generator]
+  [prediction.scene_risk_assessor]
+  [prediction.risk_object_ranker]
+}
+
+package "planning" {
+  [planning.behavior_tree]
+  [planning.task_tree]
+  [planning.behavior_planner]
+  [planning.gap_acceptance_evaluator]
+  [planning.speed_planner]
+  [planning.trajectory_stitcher]
+  [planning.trajectory_planner]
+}
+
+package "safety" {
+  [safety.supervisor]
+  [safety.guardian]
+}
+
+package "runtime" {
+  [runtime.autonomy_stack]
+  [runtime.evaluator]
+  [runtime.event_logger]
+  [runtime.decision_trace_writer]
+  [runtime.risk_trace_writer]
+  [runtime.hypothesis_trace_writer]
+}
+
+[perception.sensor_model] --> [perception.fusion_engine]
+[perception.sensor_model] --> [perception.track_manager]
+[perception.fusion_engine] --> [perception.occupancy_grid]
+[perception.track_manager] --> [perception.lane_occupancy_analyzer]
+[perception.track_manager] --> [prediction.intention]
+[prediction.intention] --> [prediction.constant_velocity]
+[prediction.constant_velocity] --> [prediction.trajectory_hypothesis_generator]
+[prediction.constant_velocity] --> [prediction.scene_risk_assessor]
+[prediction.constant_velocity] --> [prediction.risk_object_ranker]
+[prediction.trajectory_hypothesis_generator] --> [planning.gap_acceptance_evaluator]
+[prediction.scene_risk_assessor] --> [planning.behavior_tree]
+[prediction.risk_object_ranker] --> [planning.task_tree]
+[planning.behavior_tree] --> [planning.behavior_planner]
+[planning.task_tree] --> [planning.behavior_planner]
+[planning.behavior_planner] --> [planning.gap_acceptance_evaluator]
+[planning.gap_acceptance_evaluator] --> [safety.supervisor]
+[planning.behavior_planner] --> [planning.speed_planner]
+[planning.speed_planner] --> [planning.trajectory_stitcher]
+[planning.trajectory_stitcher] --> [planning.trajectory_planner]
+[planning.trajectory_planner] --> [safety.supervisor]
+[safety.supervisor] --> [safety.guardian]
+[safety.guardian] --> [runtime.autonomy_stack]
+[runtime.autonomy_stack] --> [runtime.evaluator]
+[runtime.autonomy_stack] --> [runtime.event_logger]
+[runtime.autonomy_stack] --> [runtime.decision_trace_writer]
+[runtime.autonomy_stack] --> [runtime.risk_trace_writer]
+[runtime.autonomy_stack] --> [runtime.hypothesis_trace_writer]
+@enduml

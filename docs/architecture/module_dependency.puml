@@ -1,0 +1,72 @@
+@startuml
+skinparam componentStyle rectangle
+
+package simulation {
+  [world]
+  [adapter]
+  [loader]
+}
+package localization {
+  [filter]
+}
+package map {
+  [lane_map]
+  [route_planner]
+}
+package perception {
+  [sensor_model]
+  [fusion_engine]
+  [occupancy_grid]
+}
+package prediction {
+  [cv_predictor]
+  [interaction]
+}
+package planning {
+  [behavior_fsm]
+  [behavior_planner]
+  [speed_planner]
+  [trajectory_stitcher]
+  [trajectory_planner]
+}
+package control {
+  [lateral]
+  [longitudinal]
+  [controller]
+}
+package runtime {
+  [autonomy_stack]
+  [evaluator]
+  [report_writer]
+}
+
+[adapter] --> [world]
+[filter] --> [lane_map]
+[route_planner] --> [lane_map]
+[sensor_model] --> [world]
+[fusion_engine] --> [sensor_model]
+[occupancy_grid] --> [fusion_engine]
+[cv_predictor] --> [sensor_model]
+[interaction] --> [cv_predictor]
+[behavior_planner] --> [behavior_fsm]
+[behavior_planner] --> [occupancy_grid]
+[speed_planner] --> [behavior_planner]
+[trajectory_stitcher] --> [trajectory_planner]
+[trajectory_planner] --> [speed_planner]
+[controller] --> [lateral]
+[controller] --> [longitudinal]
+[autonomy_stack] --> [adapter]
+[autonomy_stack] --> [filter]
+[autonomy_stack] --> [route_planner]
+[autonomy_stack] --> [fusion_engine]
+[autonomy_stack] --> [occupancy_grid]
+[autonomy_stack] --> [cv_predictor]
+[autonomy_stack] --> [interaction]
+[autonomy_stack] --> [behavior_planner]
+[autonomy_stack] --> [speed_planner]
+[autonomy_stack] --> [trajectory_stitcher]
+[autonomy_stack] --> [trajectory_planner]
+[autonomy_stack] --> [controller]
+[autonomy_stack] --> [evaluator]
+[report_writer] --> [autonomy_stack]
+@enduml

@@ -1,0 +1,70 @@
+@startuml
+skinparam monochrome true
+skinparam packageStyle rectangle
+
+package "simulation" {
+  [simulation.world]
+  [simulation.adapter]
+  [simulation.loader]
+  [simulation.external_bridge]
+}
+package "perception" {
+  [perception.sensor_model]
+  [perception.fusion_engine]
+  [perception.track_manager]
+  [perception.occupancy_grid]
+}
+package "prediction" {
+  [prediction.intention]
+  [prediction.constant_velocity]
+  [prediction.interaction]
+}
+package "planning" {
+  [planning.behavior_fsm]
+  [planning.lane_change_manager]
+  [planning.behavior_planner]
+  [planning.speed_planner]
+  [planning.trajectory_stitcher]
+  [planning.trajectory_planner]
+}
+package "control" {
+  [control.lateral]
+  [control.longitudinal]
+}
+package "runtime" {
+  [runtime.mission_manager]
+  [runtime.autonomy_stack]
+  [runtime.evaluator]
+  [runtime.event_logger]
+  [runtime.report_writer]
+}
+package "safety" {
+  [safety.guardian]
+}
+
+[simulation.world] --> [simulation.adapter]
+[simulation.adapter] --> [runtime.autonomy_stack]
+[simulation.loader] --> [runtime.autonomy_stack]
+[perception.sensor_model] --> [perception.fusion_engine]
+[perception.sensor_model] --> [perception.track_manager]
+[perception.fusion_engine] --> [perception.occupancy_grid]
+[perception.track_manager] --> [prediction.intention]
+[prediction.intention] --> [prediction.constant_velocity]
+[prediction.constant_velocity] --> [planning.behavior_planner]
+[perception.occupancy_grid] --> [planning.behavior_planner]
+[planning.behavior_fsm] --> [planning.behavior_planner]
+[planning.lane_change_manager] --> [planning.behavior_planner]
+[planning.behavior_planner] --> [planning.speed_planner]
+[planning.behavior_planner] --> [planning.trajectory_planner]
+[planning.trajectory_stitcher] --> [planning.trajectory_planner]
+[planning.trajectory_planner] --> [safety.guardian]
+[safety.guardian] --> [control.lateral]
+[safety.guardian] --> [control.longitudinal]
+[control.lateral] --> [runtime.autonomy_stack]
+[control.longitudinal] --> [runtime.autonomy_stack]
+[runtime.autonomy_stack] --> [runtime.mission_manager]
+[runtime.autonomy_stack] --> [runtime.evaluator]
+[runtime.autonomy_stack] --> [runtime.event_logger]
+[runtime.autonomy_stack] --> [runtime.report_writer]
+[runtime.autonomy_stack] --> [simulation.external_bridge]
+@enduml

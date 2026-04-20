@@ -1,0 +1,66 @@
+    #pragma once
+    #include <string>
+    #include <sstream>
+    namespace mad::generated::ros2 {
+    struct AutoMsg0040 {
+        double stamp {0.0};
+        int frame_index {0};
+        double field_00 {0.0};
+double field_01 {0.0};
+double field_02 {0.0};
+double field_03 {0.0};
+double field_04 {0.0};
+double field_05 {0.0};
+double field_06 {0.0};
+double field_07 {0.0};
+double field_08 {0.0};
+double field_09 {0.0};
+double field_10 {0.0};
+double field_11 {0.0};
+double field_12 {0.0};
+double field_13 {0.0};
+double field_14 {0.0};
+double field_15 {0.0};
+double field_16 {0.0};
+double field_17 {0.0};
+double field_18 {0.0};
+double field_19 {0.0};
+double field_20 {0.0};
+double field_21 {0.0};
+double field_22 {0.0};
+double field_23 {0.0};
+double field_24 {0.0};
+double field_25 {0.0};
+double field_26 {0.0};
+double field_27 {0.0};
+double field_28 {0.0};
+double field_29 {0.0};
+double field_30 {0.0};
+double field_31 {0.0};
+double field_32 {0.0};
+double field_33 {0.0};
+double field_34 {0.0};
+double field_35 {0.0};
+double field_36 {0.0};
+double field_37 {0.0};
+double field_38 {0.0};
+double field_39 {0.0};
+double field_40 {0.0};
+double field_41 {0.0};
+double field_42 {0.0};
+double field_43 {0.0};
+double field_44 {0.0};
+double field_45 {0.0};
+double field_46 {0.0};
+double field_47 {0.0};
+double field_48 {0.0};
+double field_49 {0.0};
+double field_50 {0.0};
+double field_51 {0.0};
+double field_52 {0.0};
+double field_53 {0.0};
+double field_54 {0.0};
+double field_55 {0.0};
+        std::string Serialize() const;
+    };
+    }

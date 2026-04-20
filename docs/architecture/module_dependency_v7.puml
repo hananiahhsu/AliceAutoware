@@ -1,0 +1,74 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam defaultTextAlignment left
+skinparam wrapWidth 240
+
+package "Perception" {
+  [perception.sensor_model]
+  [perception.fusion_engine]
+  [perception.track_manager]
+  [perception.occupancy_grid]
+  [perception.lane_occupancy_analyzer]
+}
+
+package "Prediction" {
+  [prediction.intention]
+  [prediction.constant_velocity]
+  [prediction.scene_risk_assessor]
+  [prediction.risk_object_ranker]
+}
+
+package "Planning" {
+  [planning.behavior_tree]
+  [planning.task_tree]
+  [planning.behavior_planner]
+  [planning.speed_planner]
+  [planning.trajectory_stitcher]
+  [planning.trajectory_planner]
+}
+
+package "Runtime / Safety" {
+  [runtime.autonomy_stack]
+  [runtime.mission_manager]
+  [runtime.decision_trace_writer]
+  [runtime.risk_trace_writer]
+  [safety.guardian]
+}
+
+package "Interop" {
+  [simulation.external_bridge]
+  [simulation.ros2_message_schema]
+  [simulation.ros2_bridge_stub]
+  [simulation.task_bridge_stub]
+  [simulation.carla_bridge_stub]
+}
+
+[perception.sensor_model] --> [perception.fusion_engine]
+[perception.sensor_model] --> [perception.track_manager]
+[perception.fusion_engine] --> [perception.occupancy_grid]
+[perception.track_manager] --> [perception.lane_occupancy_analyzer]
+[perception.track_manager] --> [prediction.intention]
+[prediction.intention] --> [prediction.constant_velocity]
+[perception.occupancy_grid] --> [prediction.scene_risk_assessor]
+[prediction.constant_velocity] --> [prediction.scene_risk_assessor]
+[prediction.constant_velocity] --> [prediction.risk_object_ranker]
+[prediction.scene_risk_assessor] --> [planning.behavior_tree]
+[prediction.scene_risk_assessor] --> [planning.task_tree]
+[prediction.risk_object_ranker] --> [planning.task_tree]
+[perception.lane_occupancy_analyzer] --> [planning.task_tree]
+[planning.behavior_tree] --> [planning.behavior_planner]
+[planning.task_tree] --> [planning.behavior_planner]
+[planning.behavior_planner] --> [planning.speed_planner]
+[planning.behavior_planner] --> [planning.trajectory_stitcher]
+[planning.speed_planner] --> [planning.trajectory_planner]
+[planning.trajectory_stitcher] --> [planning.trajectory_planner]
+[planning.trajectory_planner] --> [safety.guardian]
+[runtime.autonomy_stack] --> [runtime.mission_manager]
+[runtime.autonomy_stack] --> [runtime.decision_trace_writer]
+[runtime.autonomy_stack] --> [runtime.risk_trace_writer]
+[runtime.autonomy_stack] --> [simulation.external_bridge]
+[runtime.autonomy_stack] --> [simulation.ros2_message_schema]
+[runtime.autonomy_stack] --> [simulation.ros2_bridge_stub]
+[runtime.autonomy_stack] --> [simulation.task_bridge_stub]
+[runtime.autonomy_stack] --> [simulation.carla_bridge_stub]
+@enduml

@@ -1,0 +1,383 @@
+{
+  "scenario_id": "generated_case_1316",
+  "description": "auto-generated regression case for tactical planning, safety, and interaction robustness evaluation",
+  "ego": {
+    "lane_id": 2,
+    "x": 0.0,
+    "speed": 18.2
+  },
+  "actors": [
+    {
+      "actor_id": 1000,
+      "lane_id": 2,
+      "x": 0.0,
+      "speed": 8.2,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 20.0,
+      "desired_speed": 6.7
+    },
+    {
+      "actor_id": 1001,
+      "lane_id": 0,
+      "x": 8.0,
+      "speed": 9.8,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 25.0,
+      "desired_speed": 9.8
+    },
+    {
+      "actor_id": 1002,
+      "lane_id": 1,
+      "x": 16.0,
+      "speed": 11.4,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 30.0,
+      "desired_speed": 12.9
+    },
+    {
+      "actor_id": 1003,
+      "lane_id": 2,
+      "x": 24.0,
+      "speed": 13.0,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 35.0,
+      "desired_speed": 11.5
+    },
+    {
+      "actor_id": 1004,
+      "lane_id": 0,
+      "x": 32.0,
+      "speed": 13.6,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 40.0,
+      "desired_speed": 13.6
+    },
+    {
+      "actor_id": 1005,
+      "lane_id": 1,
+      "x": 40.0,
+      "speed": 15.2,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 45.0,
+      "desired_speed": 16.7
+    },
+    {
+      "actor_id": 1006,
+      "lane_id": 2,
+      "x": 48.0,
+      "speed": 16.8,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 50.0,
+      "desired_speed": 15.3
+    },
+    {
+      "actor_id": 1007,
+      "lane_id": 0,
+      "x": 56.0,
+      "speed": 18.4,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 55.0,
+      "desired_speed": 18.4
+    },
+    {
+      "actor_id": 1008,
+      "lane_id": 1,
+      "x": 64.0,
+      "speed": 20.0,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 20.0,
+      "desired_speed": 21.5
+    },
+    {
+      "actor_id": 1009,
+      "lane_id": 2,
+      "x": 72.0,
+      "speed": 8.0,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 25.0,
+      "desired_speed": 6.5
+    },
+    {
+      "actor_id": 1010,
+      "lane_id": 0,
+      "x": 80.0,
+      "speed": 9.6,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 30.0,
+      "desired_speed": 9.6
+    },
+    {
+      "actor_id": 1011,
+      "lane_id": 1,
+      "x": 88.0,
+      "speed": 11.2,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 35.0,
+      "desired_speed": 12.7
+    },
+    {
+      "actor_id": 1012,
+      "lane_id": 2,
+      "x": 96.0,
+      "speed": 12.8,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 40.0,
+      "desired_speed": 11.3
+    },
+    {
+      "actor_id": 1013,
+      "lane_id": 0,
+      "x": 104.0,
+      "speed": 14.4,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 45.0,
+      "desired_speed": 14.4
+    },
+    {
+      "actor_id": 1014,
+      "lane_id": 1,
+      "x": 112.0,
+      "speed": 15.0,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 50.0,
+      "desired_speed": 16.5
+    },
+    {
+      "actor_id": 1015,
+      "lane_id": 2,
+      "x": 120.0,
+      "speed": 16.6,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 55.0,
+      "desired_speed": 15.1
+    },
+    {
+      "actor_id": 1016,
+      "lane_id": 0,
+      "x": 128.0,
+      "speed": 18.2,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 20.0,
+      "desired_speed": 18.2
+    },
+    {
+      "actor_id": 1017,
+      "lane_id": 1,
+      "x": 136.0,
+      "speed": 19.8,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 25.0,
+      "desired_speed": 21.3
+    },
+    {
+      "actor_id": 1018,
+      "lane_id": 2,
+      "x": 144.0,
+      "speed": 8.8,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 30.0,
+      "desired_speed": 7.3
+    },
+    {
+      "actor_id": 1019,
+      "lane_id": 0,
+      "x": 152.0,
+      "speed": 9.4,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 35.0,
+      "desired_speed": 9.4
+    },
+    {
+      "actor_id": 1020,
+      "lane_id": 1,
+      "x": 160.0,
+      "speed": 11.0,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 40.0,
+      "desired_speed": 12.5
+    },
+    {
+      "actor_id": 1021,
+      "lane_id": 2,
+      "x": 168.0,
+      "speed": 12.6,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 45.0,
+      "desired_speed": 11.1
+    },
+    {
+      "actor_id": 1022,
+      "lane_id": 0,
+      "x": 176.0,
+      "speed": 14.2,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 50.0,
+      "desired_speed": 14.2
+    },
+    {
+      "actor_id": 1023,
+      "lane_id": 1,
+      "x": 184.0,
+      "speed": 15.8,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 55.0,
+      "desired_speed": 17.3
+    },
+    {
+      "actor_id": 1024,
+      "lane_id": 2,
+      "x": 192.0,
+      "speed": 16.4,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 20.0,
+      "desired_speed": 14.9
+    },
+    {
+      "actor_id": 1025,
+      "lane_id": 0,
+      "x": 200.0,
+      "speed": 18.0,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 25.0,
+      "desired_speed": 18.0
+    },
+    {
+      "actor_id": 1026,
+      "lane_id": 1,
+      "x": 208.0,
+      "speed": 19.6,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 30.0,
+      "desired_speed": 21.1
+    },
+    {
+      "actor_id": 1027,
+      "lane_id": 2,
+      "x": 216.0,
+      "speed": 8.6,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 35.0,
+      "desired_speed": 7.1
+    },
+    {
+      "actor_id": 1028,
+      "lane_id": 0,
+      "x": 224.0,
+      "speed": 10.2,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 40.0,
+      "desired_speed": 10.2
+    },
+    {
+      "actor_id": 1029,
+      "lane_id": 1,
+      "x": 232.0,
+      "speed": 10.8,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 45.0,
+      "desired_speed": 12.3
+    },
+    {
+      "actor_id": 1030,
+      "lane_id": 2,
+      "x": 240.0,
+      "speed": 12.4,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 50.0,
+      "desired_speed": 10.9
+    },
+    {
+      "actor_id": 1031,
+      "lane_id": 0,
+      "x": 248.0,
+      "speed": 14.0,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 55.0,
+      "desired_speed": 14.0
+    },
+    {
+      "actor_id": 1032,
+      "lane_id": 1,
+      "x": 256.0,
+      "speed": 15.6,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 20.0,
+      "desired_speed": 17.1
+    },
+    {
+      "actor_id": 1033,
+      "lane_id": 2,
+      "x": 264.0,
+      "speed": 17.2,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 25.0,
+      "desired_speed": 15.7
+    },
+    {
+      "actor_id": 1034,
+      "lane_id": 0,
+      "x": 272.0,
+      "speed": 17.8,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 30.0,
+      "desired_speed": 17.8
+    },
+    {
+      "actor_id": 1035,
+      "lane_id": 1,
+      "x": 280.0,
+      "speed": 19.4,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 35.0,
+      "desired_speed": 20.9
+    }
+  ],
+  "tags": [
+    "generated",
+    "regression",
+    "planning",
+    "safety",
+    "interaction"
+  ],
+  "expected": {
+    "collision_free": true,
+    "max_lane_changes": 3,
+    "require_no_invalid_lane": true
+  }
+}

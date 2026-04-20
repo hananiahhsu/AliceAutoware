@@ -1,0 +1,25 @@
+@startuml
+skinparam componentStyle rectangle
+component "map.lane_corridor_builder" as corridor
+component "prediction.multi_agent_behavior_predictor" as multi
+component "planning.lane_sequence_planner" as lane_seq
+component "planning.task_tree" as task_tree
+component "safety.rss_longitudinal_checker" as rss_long
+component "safety.rss_lateral_checker" as rss_lat
+component "control.feedforward_controller" as ff
+component "control.controller" as ctrl
+component "runtime.diagnostics_monitor" as diag
+component "runtime.autonomy_stack" as stack
+component "simulation.ros2_bridge_stub" as ros2
+component "simulation.carla_bridge_stub" as carla
+corridor --> lane_seq
+multi --> task_tree
+lane_seq --> stack
+rss_long --> stack
+rss_lat --> stack
+ff --> ctrl
+ctrl --> stack
+stack --> diag
+stack --> ros2
+stack --> carla
+@enduml

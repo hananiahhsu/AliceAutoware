@@ -1,0 +1,232 @@
+{
+  "modules": [
+    {
+      "name": "localization",
+      "path": "src/localization/localization_filter.cpp"
+    },
+    {
+      "name": "map",
+      "path": "src/map/route_planner.cpp"
+    },
+    {
+      "name": "map.semantic",
+      "path": "src/map/semantic_map.cpp"
+    },
+    {
+      "name": "simulation.world",
+      "path": "src/simulation/world.cpp"
+    },
+    {
+      "name": "simulation.adapter",
+      "path": "src/simulation/simulator_adapter.cpp"
+    },
+    {
+      "name": "simulation.loader",
+      "path": "src/simulation/scenario_loader.cpp"
+    },
+    {
+      "name": "simulation.external_bridge",
+      "path": "src/simulation/external_sim_bridge.cpp"
+    },
+    {
+      "name": "simulation.ros2_message_schema",
+      "path": "src/simulation/ros2_message_schema.cpp"
+    },
+    {
+      "name": "simulation.ros2_bridge_stub",
+      "path": "src/simulation/ros2_bridge_stub.cpp"
+    },
+    {
+      "name": "simulation.carla_bridge_stub",
+      "path": "src/simulation/carla_bridge_stub.cpp"
+    },
+    {
+      "name": "simulation.task_bridge_stub",
+      "path": "src/simulation/task_bridge_stub.cpp"
+    },
+    {
+      "name": "perception.sensor_model",
+      "path": "src/perception/sensor_model.cpp"
+    },
+    {
+      "name": "perception.fusion_engine",
+      "path": "src/perception/fusion_engine.cpp"
+    },
+    {
+      "name": "perception.track_manager",
+      "path": "src/perception/track_manager.cpp"
+    },
+    {
+      "name": "perception.occupancy_grid",
+      "path": "src/perception/occupancy_grid.cpp"
+    },
+    {
+      "name": "perception.lane_occupancy_analyzer",
+      "path": "src/perception/lane_occupancy_analyzer.cpp"
+    },
+    {
+      "name": "prediction.intention",
+      "path": "src/prediction/intention_predictor.cpp"
+    },
+    {
+      "name": "prediction.constant_velocity",
+      "path": "src/prediction/constant_velocity_predictor.cpp"
+    },
+    {
+      "name": "prediction.interaction",
+      "path": "src/prediction/interaction_predictor.cpp"
+    },
+    {
+      "name": "prediction.scene_risk_assessor",
+      "path": "src/prediction/scene_risk_assessor.cpp"
+    },
+    {
+      "name": "prediction.risk_object_ranker",
+      "path": "src/prediction/risk_object_ranker.cpp"
+    },
+    {
+      "name": "prediction.trajectory_hypothesis_generator",
+      "path": "src/prediction/trajectory_hypothesis_generator.cpp"
+    },
+    {
+      "name": "prediction.joint_interaction_predictor",
+      "path": "src/prediction/joint_interaction_predictor.cpp"
+    },
+    {
+      "name": "planning.behavior_fsm",
+      "path": "src/planning/behavior_fsm.cpp"
+    },
+    {
+      "name": "planning.behavior_planner",
+      "path": "src/planning/behavior_planner.cpp"
+    },
+    {
+      "name": "planning.behavior_tree",
+      "path": "src/planning/behavior_tree.cpp"
+    },
+    {
+      "name": "planning.task_tree",
+      "path": "src/planning/task_tree.cpp"
+    },
+    {
+      "name": "planning.gap_acceptance_evaluator",
+      "path": "src/planning/gap_acceptance_evaluator.cpp"
+    },
+    {
+      "name": "planning.lane_sequence_planner",
+      "path": "src/planning/lane_sequence_planner.cpp"
+    },
+    {
+      "name": "planning.lane_change_manager",
+      "path": "src/planning/lane_change_manager.cpp"
+    },
+    {
+      "name": "planning.speed_planner",
+      "path": "src/planning/speed_planner.cpp"
+    },
+    {
+      "name": "planning.trajectory_stitcher",
+      "path": "src/planning/trajectory_stitcher.cpp"
+    },
+    {
+      "name": "planning.trajectory_planner",
+      "path": "src/planning/trajectory_planner.cpp"
+    },
+    {
+      "name": "control.gain_scheduler",
+      "path": "src/control/gain_scheduler.cpp"
+    },
+    {
+      "name": "control.lateral",
+      "path": "src/control/lateral_controller.cpp"
+    },
+    {
+      "name": "control.longitudinal",
+      "path": "src/control/longitudinal_controller.cpp"
+    },
+    {
+      "name": "control.controller",
+      "path": "src/control/controller.cpp"
+    },
+    {
+      "name": "safety.guardian",
+      "path": "src/safety/safety_guardian.cpp"
+    },
+    {
+      "name": "safety.rss_lane_change_checker",
+      "path": "src/safety/rss_lane_change_checker.cpp"
+    },
+    {
+      "name": "safety.supervisor",
+      "path": "src/safety/safety_supervisor.cpp"
+    },
+    {
+      "name": "runtime.mission_manager",
+      "path": "src/runtime/mission_manager.cpp"
+    },
+    {
+      "name": "runtime.autonomy_stack",
+      "path": "src/runtime/autonomy_stack.cpp"
+    },
+    {
+      "name": "runtime.evaluator",
+      "path": "src/runtime/evaluator.cpp"
+    },
+    {
+      "name": "runtime.event_logger",
+      "path": "src/runtime/event_logger.cpp"
+    },
+    {
+      "name": "runtime.decision_trace_writer",
+      "path": "src/runtime/decision_trace_writer.cpp"
+    },
+    {
+      "name": "runtime.risk_trace_writer",
+      "path": "src/runtime/risk_trace_writer.cpp"
+    },
+    {
+      "name": "runtime.hypothesis_trace_writer",
+      "path": "src/runtime/hypothesis_trace_writer.cpp"
+    },
+    {
+      "name": "runtime.interaction_trace_writer",
+      "path": "src/runtime/interaction_trace_writer.cpp"
+    },
+    {
+      "name": "runtime.report_writer",
+      "path": "src/runtime/report_writer.cpp"
+    },
+    {
+      "name": "map.lane_corridor_builder",
+      "path": "src/map/lane_corridor_builder.cpp"
+    },
+    {
+      "name": "prediction.multi_agent_behavior_predictor",
+      "path": "src/prediction/multi_agent_behavior_predictor.cpp"
+    },
+    {
+      "name": "safety.rss_longitudinal_checker",
+      "path": "src/safety/rss_longitudinal_checker.cpp"
+    },
+    {
+      "name": "safety.rss_lateral_checker",
+      "path": "src/safety/rss_lateral_checker.cpp"
+    },
+    {
+      "name": "control.feedforward_controller",
+      "path": "src/control/feedforward_controller.cpp"
+    },
+    {
+      "name": "runtime.diagnostics_monitor",
+      "path": "src/runtime/diagnostics_monitor.cpp"
+    },
+    {
+      "name": "planning.corridor_cost_evaluator",
+      "path": "src/planning/corridor_cost_evaluator.cpp"
+    },
+    {
+      "name": "runtime.fallback_manager",
+      "path": "src/runtime/fallback_manager.cpp"
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "scenario_id": "generated_case_5263",
+  "description": "auto-generated extended regression case for lane corridor, rss, interaction, and diagnostics stress testing",
+  "ego": {
+    "lane_id": 1,
+    "x": 0.0,
+    "speed": 20.51,
+    "goal_lane": 2
+  },
+  "actors": [
+    {
+      "actor_id": 1000,
+      "lane_id": 1,
+      "x": 1.85,
+      "speed": 8.64,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 12.0,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.0,
+        "yield_bias": 0.9166666666666666
+      }
+    },
+    {
+      "actor_id": 1001,
+      "lane_id": 2,
+      "x": 8.55,
+      "speed": 8.67,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 16.3,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.625,
+        "yield_bias": 1.0
+      }
+    },
+    {
+      "actor_id": 1002,
+      "lane_id": 0,
+      "x": 15.25,
+      "speed": 10.03,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 20.6,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.1875,
+        "yield_bias": 0.0
+      }
+    },
+    {
+      "actor_id": 1003,
+      "lane_id": 1,
+      "x": 21.95,
+      "speed": 11.39,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 24.9,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.8125,
+        "yield_bias": 0.08333333333333333
+      }
+    },
+    {
+      "actor_id": 1004,
+      "lane_id": 2,
+      "x": 28.65,
+      "speed": 12.75,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 29.2,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.375,
+        "yield_bias": 0.16666666666666666
+      }
+    },
+    {
+      "actor_id": 1005,
+      "lane_id": 0,
+      "x": 35.35,
+      "speed": 14.11,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 33.5,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 3,
+        "aggression": 1.0,
+        "yield_bias": 0.25
+      }
+    },
+    {
+      "actor_id": 1006,
+      "lane_id": 1,
+      "x": 42.05,
+      "speed": 15.47,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 37.8,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.5625,
+        "yield_bias": 0.3333333333333333
+      }
+    },
+    {
+      "actor_id": 1007,
+      "lane_id": 2,
+      "x": 48.75,
+      "speed": 16.83,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 42.1,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.125,
+        "yield_bias": 0.4166666666666667
+      }
+    },
+    {
+      "actor_id": 1008,
+      "lane_id": 0,
+      "x": 55.45,
+      "speed": 16.86,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 46.4,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.75,
+        "yield_bias": 0.5
+      }
+    },
+    {
+      "actor_id": 1009,
+      "lane_id": 1,
+      "x": 62.15,
+      "speed": 18.22,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 50.7,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.3125,
+        "yield_bias": 0.5833333333333334
+      }
+    },
+    {
+      "actor_id": 1010,
+      "lane_id": 2,
+      "x": 68.85,
+      "speed": 19.58,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 12.0,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.9375,
+        "yield_bias": 0.6666666666666666
+      }
+    },
+    {
+      "actor_id": 1011,
+      "lane_id": 0,
+      "x": 75.55,
+      "speed": 8.07,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 16.3,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.5,
+        "yield_bias": 0.75
+      }
+    },
+    {
+      "actor_id": 1012,
+      "lane_id": 1,
+      "x": 82.25,
+      "speed": 9.43,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 20.6,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.0625,
+        "yield_bias": 0.8333333333333334
+      }
+    },
+    {
+      "actor_id": 1013,
+      "lane_id": 2,
+      "x": 88.95,
+      "speed": 10.79,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 24.9,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.6875,
+        "yield_bias": 0.9166666666666666
+      }
+    },
+    {
+      "actor_id": 1014,
+      "lane_id": 0,
+      "x": 95.65,
+      "speed": 12.15,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 29.2,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.25,
+        "yield_bias": 1.0
+      }
+    },
+    {
+      "actor_id": 1015,
+      "lane_id": 1,
+      "x": 102.35,
+      "speed": 12.18,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 33.5,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.875,
+        "yield_bias": 0.0
+      }
+    },
+    {
+      "actor_id": 1016,
+      "lane_id": 2,
+      "x": 109.05,
+      "speed": 13.54,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 37.8,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.4375,
+        "yield_bias": 0.08333333333333333
+      }
+    },
+    {
+      "actor_id": 1017,
+      "lane_id": 0,
+      "x": 115.75,
+      "speed": 14.9,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 42.1,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.0,
+        "yield_bias": 0.16666666666666666
+      }
+    },
+    {
+      "actor_id": 1018,
+      "lane_id": 1,
+      "x": 122.45,
+      "speed": 16.26,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 46.4,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.625,
+        "yield_bias": 0.25
+      }
+    },
+    {
+      "actor_id": 1019,
+      "lane_id": 2,
+      "x": 129.15,
+      "speed": 17.62,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 50.7,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.1875,
+        "yield_bias": 0.3333333333333333
+      }
+    },
+    {
+      "actor_id": 1020,
+      "lane_id": 0,
+      "x": 135.85,
+      "speed": 18.98,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 12.0,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.8125,
+        "yield_bias": 0.4166666666666667
+      }
+    },
+    {
+      "actor_id": 1021,
+      "lane_id": 1,
+      "x": 142.55,
+      "speed": 20.34,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 16.3,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.375,
+        "yield_bias": 0.5
+      }
+    },
+    {
+      "actor_id": 1022,
+      "lane_id": 2,
+      "x": 149.25,
+      "speed": 7.5,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 20.6,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 0,
+        "aggression": 1.0,
+        "yield_bias": 0.5833333333333334
+      }
+    },
+    {
+      "actor_id": 1023,
+      "lane_id": 0,
+      "x": 155.95,
+      "speed": 8.86,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 24.9,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.5625,
+        "yield_bias": 0.6666666666666666
+      }
+    },
+    {
+      "actor_id": 1024,
+      "lane_id": 1,
+      "x": 162.65,
+      "speed": 10.22,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 29.2,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.125,
+        "yield_bias": 0.75
+      }
+    },
+    {
+      "actor_id": 1025,
+      "lane_id": 2,
+      "x": 169.35,
+      "speed": 11.58,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 33.5,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.75,
+        "yield_bias": 0.8333333333333334
+      }
+    },
+    {
+      "actor_id": 1026,
+      "lane_id": 0,
+      "x": 176.05,
+      "speed": 12.94,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 37.8,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.3125,
+        "yield_bias": 0.9166666666666666
+      }
+    },
+    {
+      "actor_id": 1027,
+      "lane_id": 1,
+      "x": 182.75,
+      "speed": 14.3,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 42.1,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.9375,
+        "yield_bias": 1.0
+      }
+    },
+    {
+      "actor_id": 1028,
+      "lane_id": 2,
+      "x": 189.45,
+      "speed": 15.66,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 46.4,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.5,
+        "yield_bias": 0.0
+      }
+    },
+    {
+      "actor_id": 1029,
+      "lane_id": 0,
+      "x": 196.15,
+      "speed": 15.69,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 50.7,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.0625,
+        "yield_bias": 0.08333333333333333
+      }
+    },
+    {
+      "actor_id": 1030,
+      "lane_id": 1,
+      "x": 202.85,
+      "speed": 17.05,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 12.0,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.6875,
+        "yield_bias": 0.16666666666666666
+      }
+    },
+    {
+      "actor_id": 1031,
+      "lane_id": 2,
+      "x": 209.55,
+      "speed": 18.41,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 16.3,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.25,
+        "yield_bias": 0.25
+      }
+    },
+    {
+      "actor_id": 1032,
+      "lane_id": 0,
+      "x": 216.25,
+      "speed": 19.77,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 20.6,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.875,
+        "yield_bias": 0.3333333333333333
+      }
+    },
+    {
+      "actor_id": 1033,
+      "lane_id": 1,
+      "x": 222.95,
+      "speed": 8.26,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 24.9,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.4375,
+        "yield_bias": 0.4166666666666667
+      }
+    },
+    {
+      "actor_id": 1034,
+      "lane_id": 2,
+      "x": 229.65,
+      "speed": 9.62,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 29.2,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.0,
+        "yield_bias": 0.5
+      }
+    },
+    {
+      "actor_id": 1035,
+      "lane_id": 0,
+      "x": 236.35,
+      "speed": 10.98,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 33.5,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.625,
+        "yield_bias": 0.5833333333333334
+      }
+    },
+    {
+      "actor_id": 1036,
+      "lane_id": 1,
+      "x": 243.05,
+      "speed": 11.01,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 37.8,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.1875,
+        "yield_bias": 0.6666666666666666
+      }
+    },
+    {
+      "actor_id": 1037,
+      "lane_id": 2,
+      "x": 249.75,
+      "speed": 12.37,
+      "behavior": "Cruise",
+      "target_lane": 2,
+      "trigger_x": 42.1,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.8125,
+        "yield_bias": 0.75
+      }
+    },
+    {
+      "actor_id": 1038,
+      "lane_id": 0,
+      "x": 256.45,
+      "speed": 13.73,
+      "behavior": "Brake",
+      "target_lane": 0,
+      "trigger_x": 46.4,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.375,
+        "yield_bias": 0.8333333333333334
+      }
+    },
+    {
+      "actor_id": 1039,
+      "lane_id": 1,
+      "x": 263.15,
+      "speed": 15.09,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 50.7,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 2,
+        "aggression": 1.0,
+        "yield_bias": 0.9166666666666666
+      }
+    },
+    {
+      "actor_id": 1040,
+      "lane_id": 2,
+      "x": 269.85,
+      "speed": 16.45,
+      "behavior": "CutInRight",
+      "target_lane": 2,
+      "trigger_x": 12.0,
+      "desired_speed": 9.0,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.5625,
+        "yield_bias": 1.0
+      }
+    },
+    {
+      "actor_id": 1041,
+      "lane_id": 0,
+      "x": 276.55,
+      "speed": 17.81,
+      "behavior": "Cruise",
+      "target_lane": 0,
+      "trigger_x": 16.3,
+      "desired_speed": 10.31,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.125,
+        "yield_bias": 0.0
+      }
+    },
+    {
+      "actor_id": 1042,
+      "lane_id": 1,
+      "x": 283.25,
+      "speed": 19.17,
+      "behavior": "Brake",
+      "target_lane": 1,
+      "trigger_x": 20.6,
+      "desired_speed": 11.62,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.75,
+        "yield_bias": 0.08333333333333333
+      }
+    },
+    {
+      "actor_id": 1043,
+      "lane_id": 2,
+      "x": 289.95,
+      "speed": 19.2,
+      "behavior": "CutInLeft",
+      "target_lane": 1,
+      "trigger_x": 24.9,
+      "desired_speed": 12.93,
+      "metadata": {
+        "priority": 1,
+        "aggression": 0.3125,
+        "yield_bias": 0.16666666666666666
+      }
+    },
+    {
+      "actor_id": 1044,
+      "lane_id": 0,
+      "x": 296.65,
+      "speed": 7.69,
+      "behavior": "CutInRight",
+      "target_lane": 1,
+      "trigger_x": 29.2,
+      "desired_speed": 14.24,
+      "metadata": {
+        "priority": 2,
+        "aggression": 0.9375,
+        "yield_bias": 0.25
+      }
+    },
+    {
+      "actor_id": 1045,
+      "lane_id": 1,
+      "x": 303.35,
+      "speed": 9.05,
+      "behavior": "Cruise",
+      "target_lane": 1,
+      "trigger_x": 33.5,
+      "desired_speed": 15.55,
+      "metadata": {
+        "priority": 3,
+        "aggression": 0.5,
+        "yield_bias": 0.3333333333333333
+      }
+    },
+    {
+      "actor_id": 1046,
+      "lane_id": 2,
+      "x": 310.05,
+      "speed": 10.41,
+      "behavior": "Brake",
+      "target_lane": 2,
+      "trigger_x": 37.8,
+      "desired_speed": 16.86,
+      "metadata": {
+        "priority": 4,
+        "aggression": 0.0625,
+        "yield_bias": 0.4166666666666667
+      }
+    },
+    {
+      "actor_id": 1047,
+      "lane_id": 0,
+      "x": 316.75,
+      "speed": 11.77,
+      "behavior": "CutInLeft",
+      "target_lane": 0,
+      "trigger_x": 42.1,
+      "desired_speed": 18.17,
+      "metadata": {
+        "priority": 0,
+        "aggression": 0.6875,
+        "yield_bias": 0.5
+      }
+    }
+  ],
+  "tags": [
+    "generated",
+    "regression",
+    "planning",
+    "safety",
+    "interaction",
+    "diagnostics",
+    "corridor"
+  ],
+  "expected": {
+    "collision_free": true,
+    "max_lane_changes": 4,
+    "require_no_invalid_lane": true,
+    "require_rss_gate_for_lane_change": true,
+    "diag_max_level": "warn"
+  },
+  "parameter_sweep": {
+    "dt": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "horizon": [
+      3.0,
+      4.0,
+      5.0
+    ],
+    "traffic_density_bin": 6,
+    "lane_pressure_bin": 3
+  }
+}

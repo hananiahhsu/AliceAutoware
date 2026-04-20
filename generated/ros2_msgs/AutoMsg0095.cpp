@@ -1,0 +1,66 @@
+    #include "AutoMsg0095.hpp"
+    namespace mad::generated::ros2 {
+    std::string AutoMsg0095::Serialize() const {
+        std::ostringstream ss;
+        ss << "AutoMsg0095";
+        ss << ",stamp=" << stamp;
+        ss << ",frame_index=" << frame_index;
+        ss << ",field_00=" << field_00;
+ss << ",field_01=" << field_01;
+ss << ",field_02=" << field_02;
+ss << ",field_03=" << field_03;
+ss << ",field_04=" << field_04;
+ss << ",field_05=" << field_05;
+ss << ",field_06=" << field_06;
+ss << ",field_07=" << field_07;
+ss << ",field_08=" << field_08;
+ss << ",field_09=" << field_09;
+ss << ",field_10=" << field_10;
+ss << ",field_11=" << field_11;
+ss << ",field_12=" << field_12;
+ss << ",field_13=" << field_13;
+ss << ",field_14=" << field_14;
+ss << ",field_15=" << field_15;
+ss << ",field_16=" << field_16;
+ss << ",field_17=" << field_17;
+ss << ",field_18=" << field_18;
+ss << ",field_19=" << field_19;
+ss << ",field_20=" << field_20;
+ss << ",field_21=" << field_21;
+ss << ",field_22=" << field_22;
+ss << ",field_23=" << field_23;
+ss << ",field_24=" << field_24;
+ss << ",field_25=" << field_25;
+ss << ",field_26=" << field_26;
+ss << ",field_27=" << field_27;
+ss << ",field_28=" << field_28;
+ss << ",field_29=" << field_29;
+ss << ",field_30=" << field_30;
+ss << ",field_31=" << field_31;
+ss << ",field_32=" << field_32;
+ss << ",field_33=" << field_33;
+ss << ",field_34=" << field_34;
+ss << ",field_35=" << field_35;
+ss << ",field_36=" << field_36;
+ss << ",field_37=" << field_37;
+ss << ",field_38=" << field_38;
+ss << ",field_39=" << field_39;
+ss << ",field_40=" << field_40;
+ss << ",field_41=" << field_41;
+ss << ",field_42=" << field_42;
+ss << ",field_43=" << field_43;
+ss << ",field_44=" << field_44;
+ss << ",field_45=" << field_45;
+ss << ",field_46=" << field_46;
+ss << ",field_47=" << field_47;
+ss << ",field_48=" << field_48;
+ss << ",field_49=" << field_49;
+ss << ",field_50=" << field_50;
+ss << ",field_51=" << field_51;
+ss << ",field_52=" << field_52;
+ss << ",field_53=" << field_53;
+ss << ",field_54=" << field_54;
+ss << ",field_55=" << field_55;
+        return ss.str();
+    }
+    }

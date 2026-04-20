@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B out/build/linux -G Ninja -DCMAKE_BUILD_TYPE=Release -DMAD_BUILD_TESTS=ON
+      - name: Build
+        run: cmake --build out/build/linux --parallel
+      - name: Test
+        run: ctest --test-dir out/build/linux --output-on-failure
+      - name: Architecture sync
+        run: python3 tools/check_architecture_sync.py
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Configure
+        run: cmake -S . -B out/build/windows -G Ninja -DCMAKE_BUILD_TYPE=Release -DMAD_BUILD_TESTS=ON
+      - name: Build
+        run: cmake --build out/build/windows --parallel
+      - name: Test
+        run: ctest --test-dir out/build/windows --output-on-failure
+      - name: Architecture sync
+        run: python tools/check_architecture_sync.py

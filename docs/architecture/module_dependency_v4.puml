@@ -1,0 +1,18 @@
+@startuml
+skinparam packageStyle rectangle
+package runtime { [autonomy_stack] [evaluator] [report_writer] }
+package map { [lane_map] [route_planner] [semantic_map] }
+package planning { [behavior_fsm] [lane_change_manager] [behavior_planner] [speed_planner] [trajectory_stitcher] [trajectory_planner] }
+package safety { [guardian] }
+package simulation { [world] [loader] [adapter] [external_bridge] }
+autonomy_stack --> route_planner
+autonomy_stack --> behavior_planner
+autonomy_stack --> speed_planner
+autonomy_stack --> trajectory_planner
+autonomy_stack --> guardian
+autonomy_stack --> adapter
+autonomy_stack --> external_bridge
+behavior_planner --> semantic_map
+behavior_planner --> lane_change_manager
+guardian --> evaluator
+@enduml
