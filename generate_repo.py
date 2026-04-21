@@ -166,15 +166,18 @@ struct Vec2 {
 inline double Dot(const Vec2& a, const Vec2& b) { return a.x * b.x + a.y * b.y; }
 inline double Norm(const Vec2& v) { return std::sqrt(Dot(v, v)); }
 inline double Distance(const Vec2& a, const Vec2& b) { return Norm(a - b); }
+inline constexpr double kPi = 3.141592653589793238462643383279502884;
+inline constexpr double kTwoPi = 2.0 * kPi;
+
 inline double Clamp(double value, double min_value, double max_value) {
     return std::max(min_value, std::min(max_value, value));
 }
 inline double NormalizeAngle(double angle) {
-    while (angle > M_PI) {
-        angle -= 2.0 * M_PI;
+    while (angle > kPi) {
+        angle -= kTwoPi;
     }
-    while (angle < -M_PI) {
-        angle += 2.0 * M_PI;
+    while (angle < -kPi) {
+        angle += kTwoPi;
     }
     return angle;
 }

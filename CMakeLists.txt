@@ -69,6 +69,7 @@ set(MAD_CORE_SOURCES
     src/safety/safety_supervisor.cpp
     src/runtime/report_writer.cpp
     src/runtime/autonomy_stack.cpp
+    src/visualization/dashboard_renderer.cpp
 )
 
 add_library(mad_core ${MAD_CORE_SOURCES})
@@ -84,6 +85,9 @@ target_link_libraries(mad_demo PRIVATE mad_core)
 
 add_executable(mad_batch_eval apps/mad_batch_eval.cpp)
 target_link_libraries(mad_batch_eval PRIVATE mad_core)
+
+add_executable(mad_visualizer apps/mad_visualizer.cpp)
+target_link_libraries(mad_visualizer PRIVATE mad_core)
 
 if(MAD_BUILD_TESTS)
     enable_testing()
@@ -109,7 +113,7 @@ if(MAD_BUILD_TESTS)
     add_test(NAME mad_tests COMMAND mad_tests)
 endif()
 
-install(TARGETS mad_demo mad_batch_eval
+install(TARGETS mad_demo mad_batch_eval mad_visualizer
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 install(DIRECTORY configs DESTINATION .)
